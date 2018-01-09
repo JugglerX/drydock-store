@@ -1,0 +1,90 @@
+@mixin pager() {
+  text-align: center;
+  .pager__heading  {
+  }
+  ul.pager__items {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 0;
+    li.pager__item {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: $font-bold;
+      float: left;
+      a {
+        color: $primary-color;
+        display: inline-block;
+        border-radius: 50%;
+        height: 24px;
+        width: 24px;
+        text-align: center;
+        &:hover {
+          background: $primary-color;
+          color: #FFF;
+          opacity: 0.6;
+          text-decoration: none;
+        }
+      }
+      &.pager__item--first {
+        a {
+          &:after {
+            @include fa-icon();
+            content: $fa-var-long-arrow-left;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      &.pager__item--previous {
+        a {
+          &:after {
+            @include fa-icon();
+            content: $fa-var-arrow-left;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      &.pager__item--next {
+        a {
+          &:after {
+            @include fa-icon();
+            content: $fa-var-arrow-right;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+      &.pager__item--last {
+        a {
+          &:after {
+            @include fa-icon();
+            content: $fa-var-long-arrow-right;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+
+      // ...
+      &.pager__item--ellipsis {
+        color: #666;
+      }
+      // Active
+      &.is-active {
+        a {
+          background: $primary-color;
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+.pager {
+  @include pager();
+}

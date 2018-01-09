@@ -1,40 +1,43 @@
-// Settings
-@import 'settings';
 @import 'reset';
-
-// Font
-@import 'icomoon/icomoon';
+@import 'settings';
+@import 'breakpoints';
 
 // Frameworks
-@import 'bootstrap/bootstrap';
+//@import 'bootstrap/bootstrap';
+
+// Font
+//@import 'icomoon/icomoon';
+
+// Font Awesome
+//@import 'font-awesome/font-awesome';
 
 // Libraries
-@import 'libraries/slick/slick-load';
-@import 'libraries/chosen/chosen';
-@import 'libraries/chosen/chosen-custom';
+//@import 'libraries/slick/slick-load';
+//@import 'libraries/chosen/chosen';
+//@import 'libraries/chosen/chosen-custom';
+//@import 'libraries/owl-carousel/owl-load';
+
+// Mixins
+@import 'mixins/container';
+@import 'mixins/clearfix';
 
 // Components
-@import 'components/link';
+@import 'components/button';
+@import 'components/logo';
 @import 'components/header';
 @import 'components/screenshots';
-@import 'components/footer';
-@import 'components/buttons';
 @import 'components/hero';
-@import 'components/card';
-@import 'components/feature';
-@import 'components/main';
-@import 'components/search';
-@import 'components/yamm';
 
 body {
   margin: 0;
   padding: 0;
-  color: $brand-steel;
+  color: #1B1B1B;
   font-family: $base-font;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  font-weight: $regular;
-  background: #FFF;
+  font-weight: $font-regular;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {

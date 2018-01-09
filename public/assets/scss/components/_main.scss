@@ -8,7 +8,7 @@
     > li {
       > a {
         font-size: 16px;
-        font-weight: $semibold;
+        font-weight: $font-semi-bold;
       }
     }
   }
@@ -19,9 +19,9 @@
   text-align: center;
   padding: 50px 0 60px 0;
   .why-gimko-heading {
-    color: $brand-navy;
+    color: $primary-color;
     font-size: 30px;
-    font-weight: $semibold;
+    font-weight: $font-semi-bold;
     margin-bottom: 40px;
   }
   .btn {
@@ -31,14 +31,14 @@
 
 .tab-footer {
   text-align: center;
-  border-bottom: 1px solid $brand-pale;
+  border-bottom: 1px solid $primary-color;
   padding-bottom: 20px;
   a {
-    font-weight: $semibold;
+    font-weight: $font-semi-bold;
   }
 }
 
 a:hover {
-  color: $brand-steel;
+  color: $primary-color;
   text-decoration: none;
 }

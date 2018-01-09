@@ -6,7 +6,7 @@
 .hero {
   flex: 1 1 0;
   min-height: 400px;
-  background-color: $brand-primary;
+  background-color: $primary-color;
   background: linear-gradient(to left, #8E54E9, #4776E6);
   //background-image: url("../images/hero.jpg");
   //background-size: cover;
@@ -18,7 +18,7 @@
     margin-bottom: 20px;
     color: #FFF;
     font-size: 30px;
-    font-weight: $semibold;
+    font-weight: $font-semi-bold;
     text-transform: uppercase;
   }
   .btn {
@@ -26,7 +26,7 @@
     border-radius: 0;
   }
   &:nth-child(2) {
-    background-color: $brand-navy;
+    background-color: $primary-color;
     background-image: url("../images/tile-bg-navy.jpg");
   }
   &.hero-brand-primary {

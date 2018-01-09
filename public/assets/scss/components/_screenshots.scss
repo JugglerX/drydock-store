@@ -5,8 +5,26 @@
     text-align: center;
     .screenshot-title {
       font-size: 48px;
+      line-height: 52px;
+      margin-bottom: 5px;
       font-weight: normal;
       color: #333;
+      @include breakpoint(small only) {
+        font-size: 36px;
+        line-height: 40px;
+      }
+    }
+    .screenshot-subtitle {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 20px;
+      font-weight: $font-bold;
+      text-transform: uppercase;
+      color: #666;
+      @include breakpoint(small only) {
+        font-size: 20px;
+        line-height: 28px;
+      }
     }
     .screenshot-image {
       img {

@@ -1,4 +1,5 @@
 html,
+span,
 applet,
 object,
 iframe,
@@ -20,6 +21,7 @@ code,
 del,
 dfn,
 em,
+img,
 ins,
 kbd,
 q,
@@ -46,7 +48,14 @@ fieldset,
 form,
 label,
 legend,
+table,
 caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
 article,
 aside,
 canvas,
@@ -88,17 +97,28 @@ nav,
 section {
   display: block;
 }
-td {
-  font-weight: normal;
-  padding: 0;
-}
 blockquote {
   &:before,
   &:after {
     content: '';
   }
 }
+img {
+  display: inline-block;
+  vertical-align: bottom;
+}
 table {
   border-spacing: 0;
   border-collapse: collapse;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li {
+    margin: 0;
+    padding: 0;
+  }
 }

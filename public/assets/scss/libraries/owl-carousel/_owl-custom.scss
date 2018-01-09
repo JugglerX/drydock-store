@@ -1,0 +1,60 @@
+.owl-carousel {
+
+  // Content
+  .owl-item {
+    padding: 10px;
+  }
+
+  // Controls
+  .owl-controls {
+
+    // Prev/Next
+    .owl-buttons {
+      .owl-prev {
+        //width: 50px;
+        //height: 50px;
+        //border-radius: 50%;
+        //background: #009DCC;
+        background: none;
+        border-radius: 0;
+        font-size: 0px;
+        position: absolute;
+        top: 30%;
+        left: -60px;
+        &:after {
+          @include fa-icon();
+          content: $fa-var-chevron-left;
+          color: #FFFFFF;
+          font-size: 40px;
+          line-height: 48px;
+          text-align: center;
+        }
+      }
+      .owl-next {
+        //width: 50px;
+        //height: 50px;
+        //border-radius: 50%;
+        //background: #009DCC;
+        background: none;
+        border-radius: 0;
+        font-size: 0px;
+        position: absolute;
+        top: 30%;
+        right: -60px;
+        &:after {
+          @include fa-icon();
+          content: $fa-var-chevron-right;
+          color: #FFFFFF;
+          font-size: 40px;
+          line-height: 48px;
+          text-align: center;
+        }
+      }
+    }
+
+    // Dots
+    .owl-pagination {
+
+    }
+  }
+}

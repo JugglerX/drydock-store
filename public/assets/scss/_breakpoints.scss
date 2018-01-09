@@ -1,0 +1,91 @@
+$breakpoints: (
+  tiny: (0px, 380px),
+  small: (0px, 767px),
+  medium: (768px, 1024px),
+  large: (1025px, 1440px)
+);
+
+@mixin breakpoint($val) {
+
+  $size: nth($val, 1); // small, medium etc
+  $direction: if(length($val) > 1, nth($val, 2), up); // up down only
+
+  //@debug $direction;
+  //@debug map-has-key($breakpoints, $size);
+  //@debug map-get($breakpoints, $size);
+
+  @if map-has-key($breakpoints, $size) {
+    $range: map-get($breakpoints, $size);
+
+    $range-lower: nth($range, 1);
+    $range-upper: nth($range, 2);
+
+    @if ($direction == "up") {
+      @media screen and (min-width: $range-lower) {
+        @content;
+      }
+    }
+    @if ($direction == "down") {
+      @media screen and (max-width: $range-upper) {
+        @content;
+      }
+    }
+    @if ($direction == "only") {
+      @media screen and (min-width: $range-lower) and (max-width: $range-upper) {
+        @content;
+      }
+    }
+
+    //@warn "`#{$direction}` must be 'up', 'down' or 'only";
+    //@warn "Unknown `#{$size}` in $breakpoints";
+  }
+}
+
+//
+// Breakpoint Debugger (displays breakpoint name in bottom right corner of website)
+// ==========================================================================
+@mixin display-breakpoint {
+  &:after {
+    position: fixed;
+    z-index: 999;
+    right: 0;
+    bottom: 0;
+    padding: 0.5em 1em;
+    text-align: center;
+    opacity: 0.8;
+    color: #FFFFFF;
+    background: #000000;
+    @include breakpoint(tiny up) {
+      content: 'tiny-up';
+      background: #FF0000;
+    }
+    @include breakpoint(tiny only) {
+      content: 'tiny - #{map-get($breakpoints, tiny)}';
+      background: #FF0000;
+    }
+    @include breakpoint(small up) {
+      content: 'small-up';
+      background: #FFA500;
+    }
+    @include breakpoint(small only) {
+      content: 'small - #{map-get($breakpoints, small)}';
+      background: #FFA500;
+    }
+    @include breakpoint(medium up) {
+      content: 'medium-up';
+      background: #008000;
+    }
+    @include breakpoint(medium only) {
+      content: 'medium - #{map-get($breakpoints, medium)}';
+      background: #008000;
+    }
+    @include breakpoint(large up) {
+      content: 'large-up';
+      background: #0000FF;
+    }
+    @include breakpoint(large only) {
+      content: 'large - #{map-get($breakpoints, large)}';
+      background: #0000FF;
+    }
+  }
+}

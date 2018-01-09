@@ -1,79 +1,114 @@
 /*
- * Theme Variables
+ * Drydock Theme Variables
  */
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,600,700|Nunito+Sans:200,300,400,600,700|Hind:400,600,700|Montserrat:300,400,500,700,900|Roboto:300,400,500,700');
 
-//@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Roboto');
+$base-font-size: 16px;
+$base-line-height: 26px;
 
-@font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato/lato-regular-webfont.woff2') format('woff2'),
-  url('../fonts/lato/lato-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+$base-font-color: #333333;
+$custom-font-color: #333333;
 
-@font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato/lato-italic-webfont.woff2') format('woff2'),
-  url('../fonts/lato/lato-italic-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
+$base-font: 'Nunito Sans', 'Open Sans', 'helvetica', 'arial';
+$custom-font: 'Hind', 'helvetica', 'arial';
 
-}
+$font-extra-light: 200;
+$font-light: 300;
+$font-regular: 400;
+$font-semi-bold: 600;
+$font-bold: 700;
 
-@font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato/lato-semibold-webfont.woff2') format('woff2'),
-  url('../fonts/lato/lato-semibold-webfont.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
+$primary-color: #4776E6;
+$secondary-color: #8E54E9;
+$tertiary-color: #F5D327;
 
-@font-face {
-  font-family: 'lato';
-  src: url('../fonts/lato/lato-medium-webfont.woff2') format('woff2'),
-  url('../fonts/lato/lato-medium-webfont.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-}
-
-
-$primary-color: #1c75bc;
-$primary-color-alt: #2a4999;
-$secondary-color: #232A2C;
-
-$white: #FFFFFF;
-$black: #000000;
-$gray: #666666;
-
-$brand-primary:         #1c75bc;
-$brand-bright-blue:     #2a4999;
-$brand-steel:           #6d748b;
-$brand-pale:            #b9c0d6;
-$brand-light-grey:      #ecf0f1;
-$brand-navy:            #393d59;
-$brand-bone:            #ecf0f1;
-$brand-danger:          #d9534f !default;
-
-$base-font-size: 14px;
-$base-line-height: 18px;
-$base-font-color: $brand-steel;
-$base-font: 'lato', 'helvetica', 'arial';
-
-$regular: normal;
-$semibold: 500;
-$medium: 600;
+$gradient-primary: linear-gradient(to left, #8E54E9, #4776E6);
 
 $link-color: $primary-color;
 $link-color-hover: lighten($primary-color, 10%);
 
-$form-font-size: 12px;
-$form-line-height: 16px;
-$form-padding: 4px;
-$form-height: 26px;
-
+$white: #FFFFFF;
+$black: #000000;
+$gray: #666666;
+$form-font-size: 15px;
+$form-line-height: 24px;
+$form-padding: 6px;
+$form-height: 36px;
 $button-font-size: $base-font-size;
 $button-font-family: $base-font;
 
-// Tooltip
-$tooltip-background-color:  #252525;
+
+/*
+ * Foundation 6.4 Variables
+ */
+
+// 1. Global
+// ---------
+$global-width: 1200px;
+$global-text-direction: ltr;
+$global-flexbox: false;
+$global-left: if($global-text-direction == rtl, right, left);
+$global-right: if($global-text-direction == rtl, left, right);
+
+
+// 2. Breakpoints
+// --------------
+/*
+ * The Breakpoint Mixin - https://foundation.zurb.com/sites/docs/media-queries.html
+ *
+ * @include breakpoint();
+ *
+ * .element {
+ *    // Only affects medium screens and larger
+ *    @include breakpoint(medium) { }
+ *
+ *    // Only affects medium screens and smaller
+ *    @include breakpoint(medium down) { }
+ *
+ *    // Only affects medium screens, not small or large
+ *    @include breakpoint(medium only) { }
+ * }
+ *
+ */
+$breakpoints: (
+  tiny: 0,
+  small: 380px,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1280px,
+  xxlarge: 1440px,
+);
+$print-breakpoint: large;
+$breakpoint-classes: (tiny small medium large);
+
+
+// 3. The Grid
+// -----------
+/*
+ * Foundation Docs: https://foundation.zurb.com/sites/docs/grid.html
+ *
+ * @include grid-row();
+ * @include grid-column();
+ *
+ * .container {
+ *   @include grid-row() {
+ *     .main-content {
+ *       @include grid-column(8);
+ *     }
+ *     .sidebar {
+ *       @include grid-column(4);
+ *     }
+ *   }
+ * }
+ *
+ */
+$grid-row-width: $global-width;
+$grid-column-count: 12;
+$grid-column-gutter: (
+  tiny: 20px,
+  small: 20px,
+  medium: 30px,
+);
+$grid-column-align-edge: true;
+$grid-column-alias: 'columns';
+$block-grid-max: 8;

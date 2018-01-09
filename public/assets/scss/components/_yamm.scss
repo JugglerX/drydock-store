@@ -57,15 +57,15 @@
     float: right;
     > li {
       > a {
-        border: 1px solid $brand-bone;
+        border: 1px solid #EAEAEA;
         border-right: none;
         border-bottom: none;
         padding: 52px 30px 52px 30px;
         height: 126px;
-        color: $brand-primary;
+        color: $primary-color;
         text-transform: uppercase;
         font-size: 16px;
-        font-weight: $medium;
+        font-weight: $font-medium;
         .angle {
           position: absolute;
           width: 100%;
@@ -75,15 +75,15 @@
           &:after {
             @include ico-icon();
             content: $ico-angle-down;
-            color: $brand-bone;
+            color: #EAEAEA;
           }
         }
       }
       &:hover,
       &.open {
         > a {
-          background-color: $brand-bone;
-          color: $brand-primary;
+          background-color: #EAEAEA;
+          color: $primary-color;
           .angle {
             position: absolute;
             width: 100%;
@@ -93,7 +93,7 @@
             &:after {
               @include ico-icon();
               content: $ico-angle-up;
-              color: $brand-primary;
+              color: $primary-color;
             }
           }
         }
@@ -102,19 +102,19 @@
         padding: 0;
         margin: 0;
         background-color: #fff;
-        border: 1px solid $brand-bone;
+        border: 1px solid #EAEAEA;
         box-shadow: none;
         > li {
           > a {
             padding: 20px;
-            border-bottom: 1px solid $brand-bone;
+            border-bottom: 1px solid #EAEAEA;
             text-transform: uppercase;
           }
         }
       }
       &:last-of-type {
         > a {
-          border-right: 1px solid $brand-bone;
+          border-right: 1px solid #EAEAEA;
         }
       }
     }
@@ -125,11 +125,11 @@
     > li {
       float: none;
       > a {
-        color: $brand-primary;
+        color: $primary-color;
         padding: 20px 25px 20px 25px;
         margin: 0;
-        border-bottom: 1px solid $brand-bone;
-        font-weight: $medium;
+        border-bottom: 1px solid #EAEAEA;
+        font-weight: $font-medium;
         .ico {
           vertical-align: middle;
           margin-right: 15px;
@@ -146,8 +146,8 @@
       }
       &.active {
         > a {
-          background-color: $brand-bone;
-          color: $brand-steel;
+          background-color: #EAEAEA;
+          color: $primary-color;
           box-shadow: inset -3px 0 5px -2px rgba(0,0,0,0.1);
         }
       }
@@ -161,12 +161,12 @@
     a {
       &:hover {
         text-decoration: none;
-        color: $brand-steel;
+        color: $primary-color;
       }
     }
   }
   .mm-image-box {
-    border: 1px solid $brand-bone;
+    border: 1px solid #EAEAEA;
     padding: 20px;
     img {
       width: 100%;
@@ -186,7 +186,7 @@
      flex: 1;
    }
    .mm-buy-right {
-     border-left: 1px solid $brand-bone;
+     border-left: 1px solid #EAEAEA;
      flex: 3;
      //padding-top: 30px;
      //padding-bottom: 15px;
@@ -196,16 +196,16 @@
    }
    h2 {
      font-size: 14px;
-     font-weight: $medium;
+     font-weight: $font-medium;
      text-transform: uppercase;
-     border-bottom: 1px solid $brand-bone;
+     border-bottom: 1px solid #EAEAEA;
      margin: 0;
      margin-bottom: 20px;
      padding-bottom: 30px;
      a {
-       color: $brand-steel;
+       color: $primary-color;
        &:hover {
-        color: $brand-pale;
+        color: $primary-color;
        }
      }
    }
@@ -214,9 +214,9 @@
 .mm-my-gimko {
   h2 {
     font-size: 14px;
-    font-weight: $medium;
+    font-weight: $font-medium;
     text-transform: uppercase;
-    border-bottom: 1px solid $brand-bone;
+    border-bottom: 1px solid #EAEAEA;
     margin: 0;
     margin-bottom: 20px;
     padding-bottom: 25px;
@@ -226,9 +226,9 @@
       vertical-align: middle;
     }
     a {
-      color: $brand-steel;
+      color: $primary-color;
       &:hover {
-        color: $brand-pale;
+        color: $primary-color;
       }
     }
   }
@@ -240,7 +240,7 @@
   }
   .yamm-wrap {
     padding: 30px 30px 0 30px;
-    border-bottom: 1px solid $brand-bone;
+    border-bottom: 1px solid #EAEAEA;
     &:first-of-type {
       padding: 30px 30px 0 30px;
     }

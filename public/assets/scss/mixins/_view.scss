@@ -1,0 +1,65 @@
+.view {
+  position: relative;
+  .view-header {
+    position: relative;
+    h1 {
+      color: #333333;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 42px;
+      font-weight: $font-regular;
+      font-family: $base-font;
+      line-height: 46px;
+    }
+    h2 {
+      color: #333333;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 36px;
+      font-weight: $font-regular;
+      font-family: $base-font;
+      line-height: 40px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 22px;
+      margin-bottom: 20px;
+      color: #666;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    h2 + p {
+      margin-bottom: 10px;
+    }
+  }
+  .view-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @include breakpoint(small only) {
+      display: block;
+    }
+    .views-row {
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 33%;
+      margin-bottom: 10px;
+      @include breakpoint(small only) {
+        flex-basis: 100%;
+      }
+      @include breakpoint(medium only) {
+        flex-basis: 50%;
+      }
+    }
+  }
+  .view-empty {
+    ul.links {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      li {
+
+      }
+    }
+  }
+}

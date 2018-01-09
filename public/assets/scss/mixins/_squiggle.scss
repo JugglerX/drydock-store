@@ -1,0 +1,9 @@
+@mixin squiggle() {
+  background-image: url('../images/squiggle.png');
+  background-repeat: no-repeat;
+  background-position: bottom center;
+}
+
+.squiggle {
+  @include squiggle();
+}

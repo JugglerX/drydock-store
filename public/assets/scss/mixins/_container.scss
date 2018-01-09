@@ -1,0 +1,15 @@
+@mixin container() {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+@mixin container-fullwidth() {
+  max-width: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.container {
+  @include container();
+}

@@ -1,0 +1,22 @@
+// Logo
+.logo {
+  float: left;
+  width: 198px;
+  height: 18px;
+  background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include breakpoint(small only) {
+    float: left;
+    width: 198px;
+    height: 18px;
+    background-image: url('../images/logo-mobile.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
