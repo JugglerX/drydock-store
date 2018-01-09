@@ -1,0 +1,44 @@
+.main {
+  margin-top: 20px;
+  padding-bottom: 40px;
+}
+
+.most-recent {
+  .nav-tabs {
+    > li {
+      > a {
+        font-size: 16px;
+        font-weight: $semibold;
+      }
+    }
+  }
+}
+
+.why-gimko {
+  background: #FFFFFF;
+  text-align: center;
+  padding: 50px 0 60px 0;
+  .why-gimko-heading {
+    color: $brand-navy;
+    font-size: 30px;
+    font-weight: $semibold;
+    margin-bottom: 40px;
+  }
+  .btn {
+    padding: 15px 20px;
+  }
+}
+
+.tab-footer {
+  text-align: center;
+  border-bottom: 1px solid $brand-pale;
+  padding-bottom: 20px;
+  a {
+    font-weight: $semibold;
+  }
+}
+
+a:hover {
+  color: $brand-steel;
+  text-decoration: none;
+}

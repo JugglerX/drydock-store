@@ -1,0 +1,18 @@
+<div class="card card-detail">
+    <div class="card-image">
+        <% if (typeof image == 'undefined') { %>
+            <img src="assets/images/store.jpg" style="padding-top: 20px; padding-bottom: 20px;">
+        <% } %>
+        <% if (typeof image !== 'undefined') { %>
+            <img src="assets/images/<%- image %>">
+        <% } %>
+    </div>
+    <div class="card-details">
+        <div class="card-title">
+            Trading Cards and Collectables
+        </div>
+        <div class="card-body">
+            <p>We specialise in sport and non sport factory sealed boxes, inserts and...</p>
+        </div>
+    </div>
+</div>

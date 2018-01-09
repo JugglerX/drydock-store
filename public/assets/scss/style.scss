@@ -1,0 +1,42 @@
+// Settings
+@import 'settings';
+@import 'reset';
+
+// Font
+@import 'icomoon/icomoon';
+
+// Frameworks
+@import 'bootstrap/bootstrap';
+
+// Libraries
+@import 'libraries/slick/slick-load';
+@import 'libraries/chosen/chosen';
+@import 'libraries/chosen/chosen-custom';
+
+// Components
+@import 'components/link';
+@import 'components/header';
+@import 'components/screenshots';
+@import 'components/footer';
+@import 'components/buttons';
+@import 'components/hero';
+@import 'components/card';
+@import 'components/feature';
+@import 'components/main';
+@import 'components/search';
+@import 'components/yamm';
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $brand-steel;
+  font-family: $base-font;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $regular;
+  background: #FFF;
+}
+
+* {
+  box-sizing: border-box;
+}

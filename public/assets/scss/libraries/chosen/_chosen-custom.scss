@@ -1,0 +1,129 @@
+/* @group Base */
+.chosen-container {
+  .chosen-drop {
+    position: absolute;
+    top: 100%;
+    z-index: 1010;
+    width: 100%;
+    border: 1px solid $brand-primary;
+    border-top: 0;
+    border-radius: 0;
+    background: #FFFFFF;
+    box-shadow: 0 4px 5px rgba(#000, .15);
+    clip: rect(0, 0, 0, 0);
+  }
+}
+
+
+/* @group Single Chosen */
+.chosen-container-single{
+  width: 100% !important;
+  .chosen-single {
+    height: 42px;
+    min-width: 160px;
+    text-align: left;
+    text-transform: none;
+    font-weight: $regular;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border: 1px solid $brand-bone;
+    border-radius: 0px;
+    background-color: #fff;
+    background: none;
+    background-clip: padding-box;
+    box-shadow: none;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 24px;
+    padding: 8px;
+    color: $brand-primary;
+  }
+  .chosen-single div {
+    b {
+      &:after {
+        @include ico-icon();
+        content: $ico-caret-down
+      }
+      margin-top: 9px;
+      background: none;
+    }
+  }
+}
+
+/* @group Active  */
+.chosen-container-active{
+  .chosen-single {
+    border: 1px solid $brand-primary;
+    box-shadow: none;
+  }
+  &.chosen-with-drop{
+    .chosen-single {
+      border: 1px solid $brand-primary;
+      border-radius: 0;
+      background-image: none;
+      box-shadow: none;
+    }
+    .chosen-single div {
+      border-left: none;
+      background: transparent;
+      background: none;
+    }
+  }
+}
+
+
+
+/* @group Results */
+.chosen-container .chosen-results {
+  color: $brand-primary;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 4px 4px 0;
+  padding: 0 0 0 4px;
+  max-height: 240px;
+  -webkit-overflow-scrolling: touch;
+  li {
+    display: none;
+    margin: 0;
+    padding: 8px 4px;
+    list-style: none;
+    line-height: 15px;
+    word-wrap: break-word;
+    -webkit-touch-callout: none;
+    &.active-result {
+      display: list-item;
+      cursor: pointer;
+      color: $brand-primary;
+    }
+    &.disabled-result {
+      display: list-item;
+      color: #ccc;
+      cursor: default;
+    }
+    &.highlighted {
+      background-color: transparent;
+      background-image: none;
+      color: $brand-pale;
+    }
+    &.no-results {
+      color: #777;
+      display: list-item;
+      background: #f4f4f4;
+    }
+    &.group-result {
+      display: list-item;
+      font-weight: bold;
+      cursor: default;
+    }
+    &.group-option {
+      padding-left: 15px;
+    }
+    em {
+      font-style: normal;
+      text-decoration: underline;
+    }
+  }
+}
+/* @end */

@@ -1,0 +1,103 @@
+.cards {
+  display: block;
+  position: relative;
+}
+
+.card {
+  background: #FAFAFA;
+  border-radius: 1px;
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  .card-image {
+    padding: 10px;
+    background: #FFF;
+    border: 1px solid #EAEAEA;
+    white-space: nowrap;
+    overflow: hidden;
+    span {
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+    img {
+      vertical-align: middle;
+      display: inline-block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .card-details {
+    @include clearfix();
+    margin-top: 15px;
+  }
+  .card-title {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: $regular;
+    color: $brand-primary;
+    margin-bottom: 5px;
+  }
+  .card-body {
+
+  }
+  .card-category {
+    float: left;
+    color: $brand-steel;
+    font-style: italic;
+  }
+  .card-price {
+    float: right;
+    color: $primary-color;
+    font-weight: $medium;
+    font-size: 16px;
+  }
+  .card-actions {
+    text-align: center;
+    margin-top: 15px;
+  }
+  .card-button {
+    padding: 13px 16px;
+  }
+}
+
+
+.cards-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .cards-heading {
+    float: left;
+    text-transform: uppercase;
+    color: $brand-navy;
+    font-size: 16px;
+    font-weight: $semibold;
+    margin: 0;
+  }
+  .cards-view-all {
+    float: right;
+    margin: 0;
+    font-weight: $semibold;
+    &:after {
+      @include ico-icon();
+      content: $ico-angle-right;
+    }
+  }
+}
+
+.cards-grid {
+  clear: both;
+  @include clearfix();
+}
+
+
+.card-promo {
+  background: url('../images/pick-a-pack.png');
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 6px;
+  right: 2px;
+  width: 100px;
+  height: 100px;
+  z-index: 2000;
+}
