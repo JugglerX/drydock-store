@@ -13,13 +13,13 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    aws: grunt.file.readJSON('aws-keys.json'),
+    // aws: grunt.file.readJSON('aws-keys.json'),
 
     // adds a .html extension to all <a> tags
     dom_munger: {
       htmllinks: {
         options: {
-          suffix: {selector:'a',attribute:'href',value:'.html'},
+          suffix: {selector:'a',attribute:'href',value:'.html'}
         },
         src: 'www/**/*.html' //could be an array of files
       }
@@ -161,6 +161,25 @@ module.exports = function(grunt) {
             }
           }
         ]
+      }
+    },
+
+    aws_s3: {
+      options: {
+          accessKeyId: '<%= aws.AWSAccessKeyId %>',
+          secretAccessKey: '<%= aws.AWSSecretKey %>',
+          region: '<%= aws.AWSRegion %>',
+          uploadConcurrency: 5, // 5 simultaneous uploads
+          downloadConcurrency: 5 // 5 simultaneous downloads
+      },
+      production: {
+          options: {
+              bucket: '<%= aws.AWSBucket %>'
+          },
+          files: [
+              {dest: '/', cwd: 'www', action: 'delete',  differential: true},
+              {action: "upload", expand: true, cwd: 'www', src: ['**'], dest: '/', differential: true}
+          ]
       }
     },
 
