@@ -164,24 +164,24 @@ module.exports = function(grunt) {
       }
     },
 
-    aws_s3: {
-      options: {
-          accessKeyId: '<%= aws.AWSAccessKeyId %>',
-          secretAccessKey: '<%= aws.AWSSecretKey %>',
-          region: '<%= aws.AWSRegion %>',
-          uploadConcurrency: 5, // 5 simultaneous uploads
-          downloadConcurrency: 5 // 5 simultaneous downloads
-      },
-      production: {
-          options: {
-              bucket: '<%= aws.AWSBucket %>'
-          },
-          files: [
-              {dest: '/', cwd: 'www', action: 'delete',  differential: true},
-              {action: "upload", expand: true, cwd: 'www', src: ['**'], dest: '/', differential: true}
-          ]
-      }
-    },
+    // aws_s3: {
+    //   options: {
+    //       accessKeyId: '<%= aws.AWSAccessKeyId %>',
+    //       secretAccessKey: '<%= aws.AWSSecretKey %>',
+    //       region: '<%= aws.AWSRegion %>',
+    //       uploadConcurrency: 5, // 5 simultaneous uploads
+    //       downloadConcurrency: 5 // 5 simultaneous downloads
+    //   },
+    //   production: {
+    //       options: {
+    //           bucket: '<%= aws.AWSBucket %>'
+    //       },
+    //       files: [
+    //           {dest: '/', cwd: 'www', action: 'delete',  differential: true},
+    //           {action: "upload", expand: true, cwd: 'www', src: ['**'], dest: '/', differential: true}
+    //       ]
+    //   }
+    // },
 
     decomment: {
       withCwd: {
