@@ -309,6 +309,55 @@ ol li {
   transition: all .15s ease;
 }
 
+.features {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 200px;
+}
+
+.features h1 {
+  text-align: center;
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 300;
+}
+
+.feature {
+  flex: 0 0 33%;
+}
+
+.feature .feature-image {
+  display: inline-block;
+  height: 100px;
+  width: 100px;
+  padding: 20px;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.feature .feature-image img {
+  display: inline-block;
+  width: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.feature .feature-heading {
+  font-size: 16px;
+  color: #4776E6;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.feature .feature-body {
+  line-height: 20px;
+}
+
 .logo {
   float: left;
   width: 198px;
@@ -408,18 +457,59 @@ ol li {
   height: auto;
 }
 
-.heros {
-  display: flex;
-  margin-bottom: 60px;
-}
-
 .hero {
-  flex: 1 1 0;
-  min-height: 400px;
+  height: 800px;
   background-color: #4776E6;
   background: linear-gradient(to left, #8E54E9, #4776E6);
-  text-align: center;
-  padding: 140px 50px 50px 50px;
+}
+
+.hero .hero-container {
+  padding-top: 100px;
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.hero .hero-desktop-screenshot {
+  max-width: 1000px;
+}
+
+.hero .hero-desktop-screenshot img {
+  width: 90%;
+  box-shadow: 3px -4px 38px rgba(0, 0, 0, 0.2);
+}
+
+.hero .hero-mobile-screenshot {
+  position: absolute;
+  top: 330px;
+  left: 50%;
+  z-index: 10;
+}
+
+.hero .hero-mobile-screenshot img {
+  width: 80%;
+}
+
+.hero .hero-intro-text {
+  position: absolute;
+  top: 150px;
+  left: 74%;
+  z-index: 10;
+  width: 240px;
+}
+
+.hero h1 {
+  color: #FFF;
+  font-size: 56px;
+  line-height: 60px;
+  font-weight: 300;
+}
+
+.hero p {
+  font-size: 22px;
+  color: #FFF;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 .hero h2 {
