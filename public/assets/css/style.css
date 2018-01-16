@@ -559,6 +559,11 @@ ol li {
   float: right;
 }
 
+.menu-header ul li {
+  float: left;
+  margin-left: 20px;
+}
+
 .menu-header ul li a {
   color: #4776E6;
   text-decoration: none;

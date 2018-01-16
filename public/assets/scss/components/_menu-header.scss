@@ -2,6 +2,8 @@
   float: right;
   ul {
     li {
+      float: left;
+      margin-left: 20px;
       a {
         color: $primary-color;
         text-decoration: none;
