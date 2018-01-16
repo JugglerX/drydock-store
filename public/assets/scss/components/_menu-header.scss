@@ -1,0 +1,12 @@
+.menu-header {
+  float: right;
+  ul {
+    li {
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

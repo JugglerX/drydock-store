@@ -111,7 +111,9 @@ module.exports = function(grunt) {
           }
         },
         src: [
-          'public/index.ejs'
+          'public/index.ejs',
+          'public/docs/**/*.ejs',
+          'public/docs/*.ejs'
         ],
         dest: './',
         expand: true,

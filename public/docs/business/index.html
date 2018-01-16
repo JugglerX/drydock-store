@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Drydock Themes</title>
+
+    <link href="../../assets/css/style.css" type="text/css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<div class="docs">
+<section class="docs-sidebar">
+    <div class="docs-logo">
+        <img src="../../assets/images/logo-mobile.png">
+    </div>
+    <div class="menu-docs">
+    <h2>Drydock Business</h2>
+    <ul>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/docs">Docs</a></li>
+    </ul>
+</div>
+</section>
+    <section class="docs-content">
+<h1 id="toc_0">Install with DrupalVM</h1>
+
+<h2 id="toc_1">Local Prerequisites</h2>
+
+<ul>
+    <li>Install Composer Globally https://getcomposer.org/doc/00-intro.md#globally</li>
+    <li>Install Vagrant https://www.vagrantup.com/downloads.html</li>
+    <li>Install Virtual Box https://www.virtualbox.org/wiki/Downloads</li>
+</ul>
+
+<h2 id="toc_2">Install Drupal</h2>
+
+<h3 id="toc_3">Unzip The Project</h3>
+
+<p>Unzip the Drydock project on your computer into a folder called <code>drydock-business</code>. You should end up with a folder structure like below.  </p>
+
+<div><pre><code class="language-none">/drydock-business
+ - /drupal
+ - /vm</code></pre></div>
+
+<h3 id="toc_4">Configure DrupalVM</h3>
+
+<p>Modify the <code>config.yml</code> file located inside the <code>vm</code> folder. </p>
+
+<div><pre><code class="language-none">vagrant_synced_folders:
+  - local_path: ~/work/web/drydock-business // enter the full path to your project directory</code></pre></div>
+
+<h3 id="toc_5">Run Vagrant</h3>
+
+<p>Deploy DrupalVM using Vagrant. Note you must be inside the <code>vm</code> folder.</p>
+
+<div><pre><code class="language-none">vagrant up</code></pre></div>
+
+<p>If for any reason the deployment fails, running <code>vagrant provision</code> will often fix the issue.</p>
+
+<h3 id="toc_6">Visit The Website</h3>
+
+<p>Visit <em>drydock-business.local</em> in the browser! You should see the default Drupal 8 website.</p>
+
+<h2 id="toc_7">Import Data</h2>
+
+<p><strong>Choose between two methods</strong> to complete the Drydock installation. This will enable the theme, but more importantly import content types, blocks, views and content.</p>
+
+<h3 id="toc_8">Method 1: SQL Import</h3>
+
+<div><pre><code class="language-none">vagrant ssh
+cd /var/www/drupalvm/drupal/sql
+mysql -uroot -proot drupal &lt; drydock.sql
+cd ..
+cd web
+drush cr all
+exit</code></pre></div>
+
+<h3 id="toc_9">Method 2: Configuration Syncronization</h3>
+
+<div><pre><code class="language-none">vagrant ssh
+cd /var/www/drupalvm/drupal/sql
+drush en drydock -y
+cp modules/custom/drydock_engage_setup/content/file/enis-yavuz-365453.jpg sites/default/files/2017-11/enis-yavuz-365453.jpg
+drush config-set system.site page.front /node/1 -y
+drush config-set system.theme default drydock -y
+drupal config:export:single --name=system.site --no-interaction
+drupal config:export:single --name=shortcut.set.default --remove-uuid --remove-config-hash --no-interaction
+drush config-import -y</code></pre></div>
+
+<h4 id="toc_10">Generate Dummy Content</h4>
+
+<p>When the theme is first installed, it automatically creates default content for key pages including &#39;homepage, services, work, team, testimonials, about us, contact us&#39;</p>
+
+<p>To generate dummy content for each content type use <code>devel_generate</code> in the Drupal admin.</p>
+
+<p>Or use drush on the command line.</p>
+
+<div><pre><code class="language-none">drush generate-content 20 --types=service
+drush generate-content 20 --types=work
+drush generate-content 20 --types=team
+drush generate-content 20 --types=testimonial</code></pre></div>
+
+<h2 id="toc_11">Setup Github</h2>
+
+<p>Create a new Github repo on Github and then initalise a new Github repo in the /drydock-business folder.</p>
+
+<div><pre><code class="language-none">cd drydock-business
+git init
+git add -A .
+git commit -m &quot;first install&quot;
+git remote add origin https://github.com/username/your-github-repo.git
+git push origin master</code></pre></div>
+
+<h2 id="toc_12">Deploy to Pantheon</h2>
+
+<p>Create a Pantheon website. You can use the dashboard at the Pantheon website or use the Terminus CLI.</p>
+
+<div><pre><code class="language-none">terminus site:create my-project &quot;My Project&quot; &quot;Drupal 8&quot;
+terminus connection:set my-project.dev git</code></pre></div>
+
+<p>Push the code to the Pantheon git repo.</p>
+
+<div><pre><code class="language-none">// you can get the ssh url from the pantheon dashboard &gt; connection info
+git remote add pantheon ssh://ID@ID.drush.in:2222/~/repository.git
+
+// This will overwrite any existing code on your Pantheon website
+git push --force pantheon master</code></pre></div>
+
+<p>Upload the MySQL database to Pantheon</p>
+
+<div><pre><code class="language-none">vagrant ssh
+cd /var/www/drupalvm/drupal
+mkdir sql
+cd sql
+mysqldump -uroot -proot drupal &gt; drupal.sql;
+exit</code></pre></div>
+
+<p>Navigate to the sql folder and sync the database to Pantheon.</p>
+
+<div><pre><code class="language-none">// you can get the Pantheon MySQL details from the pantheon dashboard &gt; connection info &gt; database:command line
+mysql -u pantheon -p{random_password} 7 -h {pantheon_hostname} -P 27595 pantheon &lt; drupal.sql</code></pre></div>
+
+    </section>
+</div>
+
+</body>
+
+</html>

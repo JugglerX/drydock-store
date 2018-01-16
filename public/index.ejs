@@ -1,36 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Drydock Themes</title>
-
-    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-</head>
+<%- include('templates/html'); %>
 
 <body>
 
 <section class="header header-fixed">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="logo">
-                </div>
-                <ul>
-                    <li>Pricing</li>
-                    <li>Docs</li>
-                    <li>About</li>
-                    <li>Contact</li>
-                </ul>
-            </div>
-        </div>
+    <div class="header-container">
+        <%- include('templates/components/logo'); %>
+        <%- include('templates/components/menu-header'); %>
     </div>
 </section>
 
@@ -54,44 +29,168 @@
 </section>
 
 <section class="features">
+    <div class="feature-header">
     <h1>A Modern Drupal 8 Theme, built from the ground up</h1>
-    <h2>Built for freelancers, agencies and developers to kickstart projects and save 100's of hours.</h2>
-    <%- include('templates/components/feature', {
-    icon: "pantheon.png",
-    title: "Composer Install",
-    body: "Gimko has low, simple fees and no hidden costs. All standard listings are free with no re-listing fees..."
-    }); %>
-    <%- include('templates/components/feature', {
-    icon: "piggycolor.svg",
-    title: "Pantheon Ready",
-    body: "Gimko has low, simple fees and no hidden costs. All standard listings are free with no re-listing fees..."
-    }); %>
-    <%- include('templates/components/feature', {
-    icon: "piggycolor.svg",
-    title: "SCSS",
-    body: "Gimko has low, simple fees and no hidden costs. All standard listings are free with no re-listing fees..."
-    }); %>
+        <h2>Built for developers to kickstart new projects using modern Drupal tooling and best practices</h2>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/noun_652786_5A74E6.png">
+        </div>
+        <h2 class="feature-heading">Composer Install</h2>
+        <p class="feature-body">Use configuration sync to import the entire site. This can be done via Drush, or within the Drupal Admin. </p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/noun_888846_5A74E6.png">
+        </div>
+        <h2 class="feature-heading">Deploy to Pantheon</h2>
+        <p class="feature-body">Tested and ready to deploy to Pantheon.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/noun_591973_5A74E6.png">
+        </div>
+        <h2 class="feature-heading">Drupal VM</h2>
+        <p class="feature-body">Pre bundled with a Drupal VM instance for your local environment.</p>
+    </div>
+    <h3>But it's most certinaly still works with MAMP</h3>
 </section>
 
 <section class="features">
-    <h1>More than a Theme. A complete install </h1>
-    <h2>Use SQL or Drupal 8 Configuration Import to automatically install all the content types, blocks, views and dummy content.</h2>
-    <%- include('templates/components/feature', {
-    icon: "pantheon.png",
-    title: "Composer Install",
-    body: "Gimko has low, simple fees and no hidden costs. All standard listings are free with no re-listing fees..."
-    }); %>
-    <%- include('templates/components/feature', {
-    icon: "piggycolor.svg",
-    title: "Pantheon Ready",
-    body: "Gimko has low, simple fees and no hidden costs. All standard listings are free with no re-listing fees..."
-    }); %>
-    <%- include('templates/components/feature', {
-    icon: "piggycolor.svg",
-    title: "SCSS",
-    body: "Gimko has low, simple fees and no hidden costs. All standard listings are free with no re-listing fees..."
-    }); %>
+    <div class="feature-header">
+        <h1>Provision a complete, ready to Deploy site in under an Hour.</h1>
+        <h2>Use SQL Import or Configuration Import to setup all the content types, blocks, views and dummy content.</h2>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/noun_374144_5A74E6.png">
+        </div>
+        <h2 class="feature-heading">SQL Import</h2>
+        <p class="feature-body">After installing the theme, just import the bundled SQL file to import</p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/noun_218437_5A74E6.png">
+        </div>
+        <h2 class="feature-heading">Configuration Import</h2>
+        <p class="feature-body">Full configuration files ship in the <span class="snap">default/config/</span> folder. This is best practice for Drupal 8 and is an alternative to SQL Import. Use configuration sync to import the entire site. This can be done via Drush, or within the Drupal Admin. </p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/noun_881450_5A74E6.png">
+        </div>
+        <h2 class="feature-heading">Demo Content Included</h2>
+        <p class="feature-body">The full demo content is available with the install. Use devel Generate to create </p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/">
+        </div>
+        <h2 class="feature-heading">Pre Built Content Types</h2>
+        <p class="feature-body">Content types included are <span class="snap">Services</span> </p>
+    </div>
 </section>
+
+
+<section class="features">
+    <div class="feature-header">
+        <h1>beautiful Front-end Code</h1>
+        <h2>Use SQL Import or Configuration Import to setup all the content types, blocks, views and dummy content.</h2>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/sassblue.png">
+        </div>
+        <h2 class="feature-heading">SCSS</h2>
+        <p class="feature-body">Perfectly structured SCSS file structure</p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/gruntblue.png">
+        </div>
+        <h2 class="feature-heading">Grunt</h2>
+        <p class="feature-body"></p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/noun_881450_5A74E6.png">
+        </div>
+        <h2 class="feature-heading">Browser Sync</h2>
+        <p class="feature-body"></p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/">
+        </div>
+        <h2 class="feature-heading">Flexbox</h2>
+        <p class="feature-body"></p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/">
+        </div>
+        <h2 class="feature-heading">ECSS</h2>
+        <p class="feature-body"></p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/">
+        </div>
+        <h2 class="feature-heading">Fontawesome & Icomoon</h2>
+        <p class="feature-body"></p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/">
+        </div>
+        <h2 class="feature-heading">Display Suite Templates</h2>
+        <p class="feature-body"></p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/">
+        </div>
+        <h2 class="feature-heading">Better Classes</h2>
+        <p class="feature-body">We've added classes to entity, node, block, view, page and body and path. So it's possible to target anything with CSS. <span class="snap">Try .body.path-services .block-id-service-grid .view.view-services .node.node-service.node-teaser.ds-1-col</span></p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/">
+        </div>
+        <h2 class="feature-heading">Fully Responsive</h2>
+        <p class="feature-body">In this day and age? Ofcourse...</p>
+    </div>
+</section>
+
+
+<section class="features">
+    <div class="feature-header">
+        <h1>X-Factor</h1>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/sassblue.png">
+        </div>
+        <h2 class="feature-heading">No Propreitery Modules</h2>
+        <p class="feature-body">We only use popular contrib modules. You don't want to become reliant on our propritery modules.</p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/gruntblue.png">
+        </div>
+        <h2 class="feature-heading">No Bootstrap</h2>
+        <p class="feature-body"></p>
+    </div>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/noun_881450_5A74E6.png">
+        </div>
+        <h2 class="feature-heading">No Slider</h2>
+        <p class="feature-body">No Slider</p>
+    </div>
+</section>
+
 </body>
 
 </body>
