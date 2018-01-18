@@ -4,10 +4,14 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var jsLibs = [
-    "public/assets/js/jquery-1.12.4.min.js",
-    "public/assets/js/bootstrap.min.js",
-    "public/assets/js/slick.min.js",
-    "public/assets/js/chosen.jquery.min.js"
+    "public/assets/js/libraries/jquery-1.12.4.min.js",
+    "public/assets/js/libraries/jquery.accordion.js",
+  ];
+
+  var jsScripts = [
+    "public/assets/js/scripts/hamburger.js",
+    "public/assets/js/scripts/main.js",
+    "public/assets/js/scripts/accordion.js"
   ];
 
   // Project configuration.
@@ -48,7 +52,7 @@ module.exports = function(grunt) {
           mangle: false
         },
         files: {
-          'public/assets/js/scripts.min.js': 'public/assets/js/scripts.js'
+          'public/assets/js/scripts.min.js': [jsScripts]
         }
       },
       devLibs: {
@@ -81,7 +85,8 @@ module.exports = function(grunt) {
     watch: {
       jsScripts: {
         files: [
-          'public/assets/js/scripts.js'
+          'Gruntfile.js',
+          jsScripts
         ],
         tasks: ['uglify:devScripts']
       },

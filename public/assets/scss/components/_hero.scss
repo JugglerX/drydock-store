@@ -4,24 +4,46 @@
   height: 800px;
   background-color: $primary-color;
   background: linear-gradient(to left, #8E54E9, #4776E6);
-  //background-image: url("../images/hero.jpg");
-  //background-size: cover;
-  //background-repeat: no-repeat;
-
+  @include breakpoint(small only) {
+    height: auto;
+  }
   .hero-container {
-    padding-top: 100px;
     position: relative;
     max-width: 1600px;
     margin: 0 auto;
-
+    @include breakpoint(small only) {
+      padding: 10px;
+      padding-top: 40px;
+    }
+    @include breakpoint(medium only) {
+      padding: 10px;
+      padding-top: 40px;
+    }
   }
   .hero-desktop-screenshot {
     max-width: 1000px;
-    //height: 700px;
-    //overflow: hidden;
+    @include breakpoint(small only) {
+      display: none;
+    }
     img {
       width: 90%;
       box-shadow: 3px -4px 38px rgba(0, 0, 0, 0.2);
+      @include breakpoint(small only) {
+        width: 100%;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  .hero-desktop-screenshot-for-mobile {
+    display: none;
+    @include breakpoint(small only) {
+      display: block;
+    }
+    img {
+      @include breakpoint(small only) {
+        width: 100%;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+      }
     }
   }
   .hero-mobile-screenshot {
@@ -29,9 +51,25 @@
     top: 330px;
     left: 50%;
     z-index: 10;
+    width: 360px;
+    @include breakpoint(small only) {
+      display: none;
+    }
+    @include breakpoint(medium only) {
+      position: absolute;
+      top: 330px;
+      left: 60%;
+      z-index: 10;
+      width: 340px;
+    }
+    @media screen and (min-width: 900px) and (max-width: 1024px) {
+      //position: absolute;
+      //top: 330px;
+      left: 65%;
+      //z-index: 10;
+    }
     img {
       width: 80%;
-
     }
   }
   .hero-intro-text {
@@ -40,41 +78,58 @@
     left: 74%;
     z-index: 10;
     width: 240px;
-  }
-
-  h1 {
-    color: #FFF;
-    font-size: 56px;
-    line-height: 60px;
-    font-weight: $font-light;
-
-  }
-  p {
-    font-size: 22px;
-    color: #FFF;
-    margin-top: 30px;
-    margin-bottom: 50px;
-  }
-  h2 {
-    margin: 0;
-    margin-bottom: 20px;
-    color: #FFF;
-    font-size: 30px;
-    font-weight: $font-semi-bold;
-    text-transform: uppercase;
-  }
-  .btn {
-    padding: 13px 50px;
-    border-radius: 0;
-  }
-  &:nth-child(2) {
-    background-color: $primary-color;
-    background-image: url("../images/tile-bg-navy.jpg");
-  }
-  &.hero-brand-primary {
-
-  }
-  &.hero-brand-navy {
-
+    padding: 10px;
+    @include breakpoint(small only) {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: auto;
+      padding: 0;
+      padding-top: 20px;
+    }
+    @include breakpoint(medium only) {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: auto;
+      padding-top: 20px;
+    }
+    h1 {
+      color: #FFF;
+      font-size: 56px;
+      line-height: 60px;
+      font-weight: $font-light;
+      @include breakpoint(small only) {
+        font-size: 38px;
+        line-height: 40px;
+        font-weight: $font-light;
+        margin-bottom: 10px;
+      }
+    }
+    p {
+      font-size: 22px;
+      color: #FFF;
+      @include breakpoint(small only) {
+        font-size: 20px;
+        line-height: 24px;
+        color: #FFF;
+        margin-bottom: 20px;
+        width: 90%;
+      }
+    }
+    .btn {
+      padding: 13px 50px;
+      border-radius: 0;
+      margin-bottom: 20px;
+      background: yellow;
+      color: darken(yellow, 30%);
+      font-weight: $font-bold;
+      @include breakpoint(small only) {
+        margin-right: 8px;
+        padding: 13px 20px;
+        border-radius: 0;
+        margin-bottom: 20px;
+      }
+    }
   }
 }

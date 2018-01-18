@@ -1,8 +1,9 @@
 .header {
-  padding: 13px 0 12px 0;
+  padding: 10px 0 10px 0;
   border-bottom: 1px solid #EAEAEA;
   background: #FFFFFF;
   transition: padding 225ms, box-shadow 225ms, background-color .3s;
+  height: 40px;
   &.scrolled-into-view,
   &.header-fixed {
     position: fixed;
@@ -10,10 +11,15 @@
     box-shadow: 0 1px 2px 0 rgba(36, 50, 66, .15);
     transition: padding 225ms, box-shadow 225ms, background-color .3s;
     width: 100%;
-    z-index: 900;
+    z-index: 1000;
     top: 0;
   }
   .header-container {
     @include container();
+    @include clearfix();
   }
+}
+
+body.fixed-header {
+  margin-bottom: 40px;
 }

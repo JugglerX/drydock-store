@@ -9,26 +9,31 @@
 //@import 'icomoon/icomoon';
 
 // Font Awesome
-//@import 'font-awesome/font-awesome';
+@import 'font-awesome/font-awesome';
 
 // Libraries
 //@import 'libraries/slick/slick-load';
 //@import 'libraries/chosen/chosen';
 //@import 'libraries/chosen/chosen-custom';
 //@import 'libraries/owl-carousel/owl-load';
+@import 'libraries/hamburgers/hamburgers';
+//@import 'libraries/accordian/jquery.accordion';
 
 // Mixins
 @import 'mixins/container';
 @import 'mixins/clearfix';
 
 // Components
+@import 'components/body';
 @import 'components/button';
 @import 'components/feature';
 @import 'components/logo';
 @import 'components/header';
 @import 'components/screenshots';
 @import 'components/hero';
+@import 'components/hamburger';
 @import 'components/menu-header';
+@import 'components/menu-mobile';
 @import 'components/menu-docs';
 @import 'components/docs';
 @import 'components/docs-type';
@@ -43,6 +48,7 @@ body {
   font-weight: $font-regular;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  @include display-breakpoint();
 }
 
 * {

@@ -1,9 +1,14 @@
 .menu-header {
   float: right;
+  @include breakpoint(small only) {
+    display: none;
+  }
   ul {
     li {
       float: left;
       margin-left: 20px;
+      font-size: 16px;
+      line-height: 22px;
       a {
         color: $primary-color;
         text-decoration: none;

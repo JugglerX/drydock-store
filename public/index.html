@@ -11,11 +11,21 @@
     <title>Drydock Themes</title>
 
     <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <script type="application/javascript" src="assets/js/libs.min.js"></script>
+    <script type="application/javascript" src="assets/js/scripts.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
-<body>
+<body class="fixed-header">
+
+<div id="menu-mobile" class="menu-mobile">
+    <ul>
+        <li><a href="/docs">Pricing</a></li>
+        <li><a href="/docs">Docs</a></li>
+        <li><a href="/docs">Contact</a></li>
+    </ul>
+</div>
 
 <section class="header header-fixed">
     <div class="header-container">
@@ -28,60 +38,73 @@
         <li><a href="/docs">Contact</a></li>
     </ul>
 </div>
+        <button id="hamburger" class="hamburger hamburger--slider" type="button">
+   <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+   </span>
+</button>
+
     </div>
 </section>
 
 
 <section class="hero">
     <div class="hero-container">
+
+        <div class="hero-intro-text">
+            <h1>Drydock Business</h1>
+            <p>Kickstart your next Drupal 8 project with this a versatile business theme. Built to deploy on composer, configuration sync, drupal VM and Pantheon.</p>
+            <a class="btn">Live Demo</a>
+            <a class="btn">Pricing</a>
+        </div>
+
         <div class="hero-desktop-screenshot">
-            <img src="assets/images/screenshot-homepage.png">
+            <img src="assets/images/screenshot-desktop.png">
         </div>
 
         <div class="hero-mobile-screenshot">
             <img src="assets/images/screenshot-iphone.png">
         </div>
 
-        <div class="hero-intro-text">
-            <h1>Drydock Business</h1>
-            <p>Kickstart your next Drupal 8 project with this multi-purpose project. Built to deploy on composer, configuration sync, drupal VM and Pantheon.</p>
-            <a class="btn">Live Demo</a>
+        <div class="hero-desktop-screenshot-for-mobile">
+            <img src="assets/images/screenshot-desktop-for-mobile.png">
         </div>
     </div>
 </section>
 
 <section class="features">
     <div class="feature-header">
-    <h1>A Modern Drupal 8 Theme, built from the ground up</h1>
-        <h2>Built for developers to kickstart new projects using modern Drupal tooling and best practices</h2>
+        <h1>A Modern Drupal 8 Theme - built from the ground up</h1>
+        <h2>A modern developer experience from start to finish.</h2>
     </div>
     <div class="feature">
         <div class="feature-image">
             <img class="feature-icon" src="assets/images/noun_652786_5A74E6.png">
         </div>
         <h2 class="feature-heading">Composer Install</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Built using Composer, following best practices. Just <span class="snap">composer install</span> </p>
-    </div>
-    <div class="feature">
-        <div class="feature-image">
-            <img class="feature-icon" src="assets/images/noun_888846_5A74E6.png">
-        </div>
-        <h2 class="feature-heading">Deploy to Pantheon</h2>
-        <p class="feature-body">Tested and ready to deploy to Pantheon. Includes Pantheon settings and yml files and a full guide to deploy on Pantheon.</p>
     </div>
     <div class="feature">
         <div class="feature-image">
             <img class="feature-icon" src="assets/images/noun_591973_5A74E6.png">
         </div>
         <h2 class="feature-heading">Drupal VM</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Pre bundled with a Drupal VM instance for your local environment along with full installation guide.</p>
     </div>
-    <h3>But it's most certinaly still works with MAMP</h3>
-</section>
+    <div class="feature">
+        <div class="feature-image">
+            <img class="feature-icon" src="assets/images/noun_888846_5A74E6.png">
+        </div>
+        <h2 class="feature-heading">Deploy to Pantheon</h2>
+        <a class="feature-toggle"></a>
+        <p class="feature-body">Tested and ready to deploy to Pantheon. Includes Pantheon settings and yml files and a full guide to deploy on Pantheon.</p>
+    </div>
 
-<section class="features">
+
     <div class="feature-header">
-        <h1>Provision a complete, ready to Deploy site in under an Hour.</h1>
+        <h1>Provision & deploy a live site in under an Hour.</h1>
         <h2>Use SQL Import or Configuration Import to setup all the content types, blocks, views and dummy content.</h2>
     </div>
     <div class="feature">
@@ -89,6 +112,7 @@
             <img class="feature-icon" src="assets/images/noun_374144_5A74E6.png">
         </div>
         <h2 class="feature-heading">SQL Import</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">After installing the theme, just import the bundled SQL file to import</p>
     </div>
     <div class="feature">
@@ -96,6 +120,7 @@
             <img class="feature-icon" src="assets/images/noun_218437_5A74E6.png">
         </div>
         <h2 class="feature-heading">Configuration Import</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Full configuration files ship in the <span class="snap">default/config/</span> folder. This is best practice for Drupal 8 and is an alternative to SQL Import. Use configuration sync to import the entire site. This can be done via Drush, or within the Drupal Admin. </p>
     </div>
     <div class="feature">
@@ -103,6 +128,7 @@
             <img class="feature-icon" src="assets/images/noun_881450_5A74E6.png">
         </div>
         <h2 class="feature-heading">Demo Content Included</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">The full demo content is available with the install. Use devel Generate to create </p>
     </div>
     <div class="feature">
@@ -110,6 +136,7 @@
             <img class="feature-icon" src="assets/images/noun_749269_5A74E6.png">
         </div>
         <h2 class="feature-heading">Pre Built Content Types</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Content types included are
             <span class="snap">Basic</span>
             <span class="snap">Services</span>,
@@ -124,22 +151,20 @@
             <img class="feature-icon" src="assets/images/noun_244364_5A74E6.png">
         </div>
         <h2 class="feature-heading">Pre Built Views</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Pre built view (blocks) for each content type including a homepage view, grid view and slider (owl carousel) view.</p>
-        </p>
     </div>
-</section>
 
-
-<section class="features">
     <div class="feature-header">
-        <h1>beautiful Front-end Code</h1>
-        <h2>Use SQL Import or Configuration Import to setup all the content types, blocks, views and dummy content.</h2>
+        <h1>Beautiful Front-end Code</h1>
+        <h2>A theming experience that </h2>
     </div>
     <div class="feature">
         <div class="feature-image">
             <img class="feature-icon" src="assets/images/sassblue.png">
         </div>
         <h2 class="feature-heading">SCSS</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Perfectly structured .SCSS arranged into components, blocks, nodes etc. </p>
     </div>
     <div class="feature">
@@ -147,15 +172,15 @@
             <img class="feature-icon" src="assets/images/gruntblue.png">
         </div>
         <h2 class="feature-heading">Grunt</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Grunt build tools in the theme folder let you compile SCSS & JS. Watch for changes. Minify, Autoprefixer, lint and more.</p>
-
-        </p>
     </div>
     <div class="feature">
         <div class="feature-image">
             <img class="feature-icon" src="assets/images/noun_881450_5A74E6.png">
         </div>
         <h2 class="feature-heading">Browser Sync</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Run <span class="snap">grunt server</span> and the local Drupal website is launched in BrowserSync. Hot reload SCSS/JS changes without refreshing the browser.</p>
     </div>
     <div class="feature">
@@ -163,6 +188,7 @@
             <img class="feature-icon" src="assets/images/noun_906976_5A74E6.png">
         </div>
         <h2 class="feature-heading">Flexbox</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Our themes are built on Flexbox. We don't use Bootstrap or Foundation grid.</p>
     </div>
     <div class="feature">
@@ -170,6 +196,7 @@
             <img class="feature-icon" src="assets/images/noun_296440_5A74E6.png">
         </div>
         <h2 class="feature-heading">Classes Everywhere</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">We've added classes to entity, node, block, view, page, body and by URL path. It's possible to target anything with CSS. <span class="snap">Try .body.path-services .block-id-service-grid .view.view-services .node.node-service.node-teaser.ds-1-col</span></p>
     </div>
     <div class="feature">
@@ -177,6 +204,7 @@
             <img class="feature-icon" src="assets/images/noun_175179_5A74E6.png">
         </div>
         <h2 class="feature-heading">Isolated CSS Components</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Each block contains it's own isolated SCSS, namespaced by it's block machine id.</p>
     </div>
     <div class="feature">
@@ -184,6 +212,7 @@
             <img class="feature-icon" src="assets/images/noun_591141_5A74E6.png">
         </div>
         <h2 class="feature-heading">Fontawesome & Icomoon</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Bundled with Fontawesome and Icomoon SCSS files. Use the <span class="snap">@include fa-icon()</span> mixin anywhere. Generate your Icomoon icons and simply copy it into the /icomoon SCSS folder.</p>
     </div>
     <div class="feature">
@@ -191,6 +220,7 @@
             <img class="feature-icon" src="assets/images/noun_1042383_5A74E6.png">
         </div>
         <h2 class="feature-heading">Display Suite Templates</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Ships with an additional 20 Display Suite templates that use Flexbox. Includes fullwidth and fixed layouts for stacked, row, column and more.</p>
     </div>
 
@@ -199,39 +229,10 @@
             <img class="feature-icon" src="assets/images/noun_421521_5A74E6.png">
         </div>
         <h2 class="feature-heading">Fully Responsive</h2>
+        <a class="feature-toggle"></a>
         <p class="feature-body">Fully responsive out of the box. Including mobile, tablet and desktop. Ships with breakpoint mixin <span class="snap">@include breakpoint(medium only)</span>.</p>
     </div>
 </section>
-
-
-<section class="features">
-    <div class="feature-header">
-        <h1>X-Factor</h1>
-    </div>
-    <div class="feature">
-        <div class="feature-image">
-            <img class="feature-icon" src="assets/images/sassblue.png">
-        </div>
-        <h2 class="feature-heading">No Propreitery Modules</h2>
-        <p class="feature-body">We only use popular contrib modules. You don't want to become reliant on our propritery modules.</p>
-    </div>
-    <div class="feature">
-        <div class="feature-image">
-            <img class="feature-icon" src="assets/images/gruntblue.png">
-        </div>
-        <h2 class="feature-heading">No Bootstrap</h2>
-        <p class="feature-body"></p>
-    </div>
-    <div class="feature">
-        <div class="feature-image">
-            <img class="feature-icon" src="assets/images/noun_881450_5A74E6.png">
-        </div>
-        <h2 class="feature-heading">No Slider</h2>
-        <p class="feature-body">No Slider</p>
-    </div>
-</section>
-
-</body>
 
 </body>
 

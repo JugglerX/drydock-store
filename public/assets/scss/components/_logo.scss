@@ -1,15 +1,15 @@
 // Logo
 .logo {
   float: left;
-  width: 198px;
-  height: 18px;
+  width: 212px;
+  height: 20px;
   background-image: url('../images/logo.png');
   background-repeat: no-repeat;
   background-size: contain;
   @include breakpoint(small only) {
     float: left;
-    width: 198px;
-    height: 18px;
+    width: 212px;
+    height: 20px;
     background-image: url('../images/logo-mobile.png');
     background-repeat: no-repeat;
     background-size: contain;
