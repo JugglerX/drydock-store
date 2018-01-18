@@ -16,6 +16,8 @@ $(document).ready(function() {
     } else {
       wrapper.addClass('open');
       wrapper.children('.feature-body').addClass('show');
+      wrapper.siblings('.feature').removeClass('open');
+      wrapper.siblings('.feature').children('.feature-body').removeClass('show');
     }
   });
 

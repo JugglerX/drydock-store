@@ -2,7 +2,8 @@ $breakpoints: (
   tiny: (0px, 380px),
   small: (0px, 767px),
   medium: (768px, 1024px),
-  large: (1025px, 1440px)
+  large: (1025px, 1440px),
+  extra-large: (1200px, 1440px),
 );
 
 @mixin breakpoint($val) {
@@ -86,6 +87,14 @@ $breakpoints: (
     @include breakpoint(large only) {
       content: 'large - #{map-get($breakpoints, large)}';
       background: #0000FF;
+    }
+    @include breakpoint(extra-large up) {
+      content: 'extra-large-up';
+      background: #37C7FF;
+    }
+    @include breakpoint(extra-large only) {
+      content: 'extra-large - #{map-get($breakpoints, extra-large)}';
+      background: #37C7FF;
     }
   }
 }

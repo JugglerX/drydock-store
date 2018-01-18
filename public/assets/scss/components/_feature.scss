@@ -17,11 +17,6 @@
       border-top: 1px solid #CCC;
       padding: 30px;
     }
-    &:first-child {
-      @include breakpoint(small only) {
-        padding: 30px;
-      }
-    }
     h1 {
       width: 90%;
       text-align: center;
@@ -40,7 +35,7 @@
         font-family: $base-font;
         font-weight: $font-light;
         margin: 0 auto;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         text-transform: capitalize;
       }
     }
@@ -66,28 +61,20 @@
 .feature {
   flex: 0 0 30%;
   text-align: center;
+  cursor: pointer;
   @include breakpoint(small only) {
     text-align: left;
     border-top: 1px solid #CCC;
     padding: 10px;
     &:hover {
-      opacity: 0.8;
       cursor: pointer;
-      background: #EAEAEA;
     }
   }
   &.open {
-    background: #EAEAEA;
-    box-shadow: inset 0px 0px 8px 2px rgba(0,0,0,0.1);
-    //background: linear-gradient(to left, #8E54E9, #4776E6);
+    background: #f7f7f7;
   }
   .feature-image {
     display: inline-block;
-    //height: 100px;
-    //width: 100px;
-    //padding: 20px;
-    //border-radius: 50%;
-    //vertical-align: middle;
     @include breakpoint(small only) {
       text-align: left;
     }
@@ -118,16 +105,21 @@
       vertical-align: middle;
       margin: 0;
       font-size: 18px;
+      font-weight: $font-semi-bold;
     }
   }
   .feature-body {
     text-align: left;
+    font-size: 16px;
     line-height: 20px;
-    color: #666;
+    color: #4F4F4F;
     @include breakpoint(small only) {
       display: none;
-      padding-left: 38px;
+      padding-left: 37px;
       width: 90%;
+      font-size: 16px;
+      line-height: 24px;
+      padding-top: 5px;
     }
     &.show {
       @include breakpoint(small only) {
@@ -152,9 +144,11 @@
     }
   }
   .snap {
-    background: rgba(255, 245, 27, 0.38);
-    padding: 0 4px 0 4px;
+    //background: rgba(255, 245, 27, 0.38);
+    //background: #CCC;
+    //padding: 0 4px 0 4px;
     border-radius: 3px;
     color: #000;
+    font-weight: $font-semi-bold;
   }
 }
