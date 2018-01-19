@@ -20,7 +20,8 @@
       padding-top: 40px;
     }
     @include breakpoint(large up) {
-      padding-top: 80px;
+      padding: 10px;
+      padding-top: 60px;
     }
   }
   .hero-desktop-screenshot {
@@ -83,17 +84,17 @@
     }
     @include breakpoint(large up) {
       position: absolute;
-      top: 280px;
-      left: 67%;
+      top: 250px;
+      left: 65%;
       z-index: 10;
       width: 300px;
     }
     @include breakpoint(extra-large up) {
       position: absolute;
-      top: 280px;
-      left: 50%;
+      top: 240px;
+      left: 52%;
       z-index: 10;
-      width: 320px;
+      width: 300px;
     }
     //@media screen and (min-width: 1025px) and (max-width: 1200px) {
     //  position: absolute;
@@ -104,8 +105,8 @@
     //}
     img {
       width: 100%;
-      border-radius: 40px;
-      box-shadow: 13px 30px 38px rgba(252, 80, 255, 0.4);
+      border-radius: 48px;
+      box-shadow: 8px 21px 38px rgba(71, 118, 230, 0.4)
     }
   }
   .hero-intro-text {
@@ -131,7 +132,6 @@
       position: relative;
       top: 0;
       left: 0;
-      padding: 10px;
       width: 100%;
     }
     @include breakpoint(extra-large up) {

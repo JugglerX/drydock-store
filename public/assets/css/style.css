@@ -3803,7 +3803,8 @@ body.fixed-header {
 
 @media screen and (min-width: 1025px) {
   .hero .hero-container {
-    padding-top: 80px;
+    padding: 10px;
+    padding-top: 60px;
   }
 }
 
@@ -3901,8 +3902,8 @@ body.fixed-header {
 @media screen and (min-width: 1025px) {
   .hero .hero-mobile-screenshot {
     position: absolute;
-    top: 280px;
-    left: 67%;
+    top: 250px;
+    left: 65%;
     z-index: 10;
     width: 300px;
   }
@@ -3911,17 +3912,17 @@ body.fixed-header {
 @media screen and (min-width: 1200px) {
   .hero .hero-mobile-screenshot {
     position: absolute;
-    top: 280px;
-    left: 50%;
+    top: 240px;
+    left: 52%;
     z-index: 10;
-    width: 320px;
+    width: 300px;
   }
 }
 
 .hero .hero-mobile-screenshot img {
   width: 100%;
-  border-radius: 40px;
-  box-shadow: 13px 30px 38px rgba(252, 80, 255, 0.4);
+  border-radius: 48px;
+  box-shadow: 8px 21px 38px rgba(71, 118, 230, 0.4);
 }
 
 .hero .hero-intro-text {
@@ -3956,7 +3957,6 @@ body.fixed-header {
     position: relative;
     top: 0;
     left: 0;
-    padding: 10px;
     width: 100%;
   }
 }
