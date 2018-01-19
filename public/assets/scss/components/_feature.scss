@@ -1,16 +1,22 @@
 .features {
   @include container();
-  padding-top: 280px;
+
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   @include breakpoint(small only) {
     padding-top: 30px;
     display: block;
     @include container-fullwidth();
   }
   .feature-header {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    flex: 1 0 100%;
+    &:first-of-type {
+      margin-top: 280px;
+    }
     @include breakpoint(small only) {
       display: block;
       text-align: left;
@@ -38,6 +44,12 @@
         margin-bottom: 15px;
         text-transform: capitalize;
       }
+      @include breakpoint(medium only) {
+        width: 90%;
+        text-align: center;
+        font-size: 50px;
+        line-height: 56px;
+      }
     }
     h2 {
       width: 80%;
@@ -53,30 +65,38 @@
         width: auto;
         line-height: 26px;
         text-align: left;
-
+      }
+      @include breakpoint(medium only) {
+        font-size: 26px;
+        line-height: 32px;
       }
     }
   }
 }
 .feature {
-  flex: 0 0 30%;
+  flex: 0 0 33%;
   text-align: center;
-  cursor: pointer;
+  padding: 10px;
   @include breakpoint(small only) {
+    cursor: pointer;
     text-align: left;
     border-top: 1px solid #CCC;
     padding: 10px;
     &:hover {
       cursor: pointer;
     }
-  }
-  &.open {
-    background: #f7f7f7;
+    &.open {
+      background: #f7f7f7;
+    }
   }
   .feature-image {
     display: inline-block;
+    width: 100px;
+    height: 100px;
     @include breakpoint(small only) {
       text-align: left;
+      width: auto;
+      height: auto;
     }
     img {
       display: inline-block;
@@ -141,6 +161,9 @@
       color: #CCC;
       font-size: 14px;
       font-weight: lighter;
+    }
+    @include breakpoint(medium up) {
+      display: none;
     }
   }
   .snap {

@@ -76,7 +76,7 @@ module.exports = function(grunt) {
           mangle: false
         },
         files: {
-          'www/assets/js/scripts.min.js': 'public/assets/js/scripts.js',
+          'www/assets/js/scripts.min.js': [jsScripts],
           'www/assets/js/libs.min.js': [jsLibs]
         }
       }

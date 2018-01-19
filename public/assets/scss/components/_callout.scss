@@ -1,0 +1,7 @@
+
+.callout {
+  .callout-container {
+    @include container();
+
+  }
+}

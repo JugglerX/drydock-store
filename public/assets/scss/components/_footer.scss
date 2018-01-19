@@ -1,7 +1,9 @@
 .footer {
   background: #000;
   padding: 30px 0 40px 0;
-  @include clearfix();
+  .footer-container {
+    @include container();
+  }
   .footer-top {
     @include clearfix();
   }
