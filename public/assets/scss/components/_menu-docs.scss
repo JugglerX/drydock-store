@@ -1,10 +1,25 @@
 .menu-docs {
+  h2 {
+    text-transform: uppercase;
+    color: #333;
+    font-size: 20px;
+    font-weight: $font-semi-bold;
+  }
+  h3 {
+    text-transform: uppercase;
+    color: #666;
+    font-size: 18px;
+    font-weight: $font-semi-bold;
+  }
+
   ul {
     li {
       a {
         color: $primary-color;
         text-decoration: none;
-        text-transform: uppercase;
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }

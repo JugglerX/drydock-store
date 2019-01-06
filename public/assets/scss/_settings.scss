@@ -1,16 +1,16 @@
 /*
  * Drydock Theme Variables
  */
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,600,700|Nunito+Sans:200,300,400,600,700|Hind:400,600,700|Montserrat:300,400,500,700,900|Roboto:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 
 $base-font-size: 16px;
-$base-line-height: 26px;
+$base-line-height: 1.5;
 
 $base-font-color: #333333;
 $custom-font-color: #333333;
 
-$base-font: 'Nunito Sans', 'Open Sans', 'helvetica', 'arial';
-$custom-font: 'Hind', 'helvetica', 'arial';
+$base-font: 'Open Sans', 'helvetica', 'arial';
+$custom-font: 'Open Sans', 'helvetica', 'arial';
 
 $font-extra-light: 200;
 $font-light: 300;
@@ -36,79 +36,3 @@ $form-padding: 6px;
 $form-height: 36px;
 $button-font-size: $base-font-size;
 $button-font-family: $base-font;
-
-
-/*
- * Foundation 6.4 Variables
- */
-
-// 1. Global
-// ---------
-$global-width: 1200px;
-$global-text-direction: ltr;
-$global-flexbox: false;
-$global-left: if($global-text-direction == rtl, right, left);
-$global-right: if($global-text-direction == rtl, left, right);
-
-
-// 2. Breakpoints
-// --------------
-/*
- * The Breakpoint Mixin - https://foundation.zurb.com/sites/docs/media-queries.html
- *
- * @include breakpoint();
- *
- * .element {
- *    // Only affects medium screens and larger
- *    @include breakpoint(medium) { }
- *
- *    // Only affects medium screens and smaller
- *    @include breakpoint(medium down) { }
- *
- *    // Only affects medium screens, not small or large
- *    @include breakpoint(medium only) { }
- * }
- *
- */
-$breakpoints: (
-  tiny: 0,
-  small: 380px,
-  medium: 640px,
-  large: 1024px,
-  xlarge: 1280px,
-  xxlarge: 1440px,
-);
-$print-breakpoint: large;
-$breakpoint-classes: (tiny small medium large);
-
-
-// 3. The Grid
-// -----------
-/*
- * Foundation Docs: https://foundation.zurb.com/sites/docs/grid.html
- *
- * @include grid-row();
- * @include grid-column();
- *
- * .container {
- *   @include grid-row() {
- *     .main-content {
- *       @include grid-column(8);
- *     }
- *     .sidebar {
- *       @include grid-column(4);
- *     }
- *   }
- * }
- *
- */
-$grid-row-width: $global-width;
-$grid-column-count: 12;
-$grid-column-gutter: (
-  tiny: 20px,
-  small: 20px,
-  medium: 30px,
-);
-$grid-column-align-edge: true;
-$grid-column-alias: 'columns';
-$block-grid-max: 8;

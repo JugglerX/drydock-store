@@ -17,14 +17,18 @@
 //@import 'libraries/chosen/chosen-custom';
 //@import 'libraries/owl-carousel/owl-load';
 @import 'libraries/hamburgers/hamburgers';
+@import 'libraries/prism/prism';
 //@import 'libraries/accordian/jquery.accordion';
 
 // Mixins
 @import 'mixins/container';
 @import 'mixins/clearfix';
 
+
+
 // Components
 @import 'components/body';
+@import 'components/type';
 @import 'components/button';
 @import 'components/feature';
 @import 'components/logo';

@@ -6,6 +6,7 @@ module.exports = function(grunt) {
   var jsLibs = [
     "public/assets/js/libraries/jquery-1.12.4.min.js",
     "public/assets/js/libraries/jquery.accordion.js",
+    "public/assets/js/libraries/prism.js",
   ];
 
   var jsScripts = [

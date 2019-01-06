@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,600,700|Nunito+Sans:200,300,400,600,700|Hind:400,600,700|Montserrat:300,400,500,700,900|Roboto:300,400,500,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 html,
 span,
 applet,
@@ -131,44 +131,6 @@ ol li {
 
 /*
  * Drydock Theme Variables
- */
-/*
- * Foundation 6.4 Variables
- */
-/*
- * The Breakpoint Mixin - https://foundation.zurb.com/sites/docs/media-queries.html
- *
- * @include breakpoint();
- *
- * .element {
- *    // Only affects medium screens and larger
- *    @include breakpoint(medium) { }
- *
- *    // Only affects medium screens and smaller
- *    @include breakpoint(medium down) { }
- *
- *    // Only affects medium screens, not small or large
- *    @include breakpoint(medium only) { }
- * }
- *
- */
-/*
- * Foundation Docs: https://foundation.zurb.com/sites/docs/grid.html
- *
- * @include grid-row();
- * @include grid-column();
- *
- * .container {
- *   @include grid-row() {
- *     .main-content {
- *       @include grid-column(8);
- *     }
- *     .sidebar {
- *       @include grid-column(4);
- *     }
- *   }
- * }
- *
  */
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -3324,6 +3286,144 @@ ol li {
   transform: translate3d(0, -16px, 0) rotate(-90deg);
 }
 
+/* PrismJS 1.9.0
+http://prismjs.com/download.html?themes=prism&languages=markup+css+clike+javascript */
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  background: none;
+  text-shadow: 0 1px white;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: 1em;
+  margin: .5em 0;
+  overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+  background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: slategray;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+.token.function {
+  color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  color: #e90;
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}
+
 .container {
   max-width: 1220px;
   padding: 0 10px;
@@ -3340,6 +3440,166 @@ body.fixed-header {
   padding-top: 40px;
 }
 
+.text-formatted p {
+  margin-bottom: 0;
+  margin-top: 18px;
+  color: #343434;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.text-formatted h1 {
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.text-formatted h2 {
+  color: #6E6E6E;
+  margin-top: 20px;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.text-formatted h3 {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.text-formatted h4,
+.text-formatted h5,
+.text-formatted h6 {
+  font-weight: bold;
+}
+
+.text-formatted ul,
+.text-formatted ol {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 18px;
+}
+
+.text-formatted ul li,
+.text-formatted ol li {
+  color: #343434;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 16px;
+  line-height: 1.5;
+  list-style-type: disc;
+}
+
+.text-formatted a {
+  text-decoration: none;
+  color: #4776E6;
+}
+
+.text-formatted a:hover, .text-formatted a:focus {
+  text-decoration: underline;
+}
+
+.text-formatted blockquote {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #CCCCCC;
+}
+
+.text-formatted blockquote p {
+  font-size: inherit;
+}
+
+.set-content p {
+  margin-bottom: 0;
+  margin-top: 18px;
+  color: #343434;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.set-content h1 {
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.set-content h2 {
+  color: #6E6E6E;
+  margin-top: 20px;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.set-content h3 {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.set-content h4,
+.set-content h5,
+.set-content h6 {
+  font-weight: bold;
+}
+
+.set-content ul,
+.set-content ol {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 18px;
+}
+
+.set-content ul li,
+.set-content ol li {
+  color: #343434;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 16px;
+  line-height: 1.5;
+  list-style-type: disc;
+}
+
+.set-content a {
+  text-decoration: none;
+  color: #4776E6;
+}
+
+.set-content a:hover, .set-content a:focus {
+  text-decoration: underline;
+}
+
+.set-content blockquote {
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #CCCCCC;
+}
+
+.set-content blockquote p {
+  font-size: inherit;
+}
+
 .btn {
   position: relative;
   display: inline-block;
@@ -3353,7 +3613,7 @@ body.fixed-header {
   border-color: #4776E6;
   outline: none;
   background-color: #4776E6;
-  font-family: "Nunito Sans", "Open Sans", "helvetica", "arial";
+  font-family: "Open Sans", "helvetica", "arial";
   font-size: 15px;
   font-weight: 400;
   text-shadow: 0 1px 3px rgba(36, 180, 126, 0.4);
@@ -3390,7 +3650,7 @@ body.fixed-header {
   border-color: #4776E6;
   outline: none;
   background-color: #4776E6;
-  font-family: "Nunito Sans", "Open Sans", "helvetica", "arial";
+  font-family: "Open Sans", "helvetica", "arial";
   font-size: 15px;
   font-weight: 400;
   text-shadow: 0 1px 3px rgba(36, 180, 126, 0.4);
@@ -3441,7 +3701,7 @@ body.fixed-header {
   border-color: #4776E6;
   outline: none;
   background-color: #4776E6;
-  font-family: "Nunito Sans", "Open Sans", "helvetica", "arial";
+  font-family: "Open Sans", "helvetica", "arial";
   font-size: 15px;
   font-weight: 400;
   text-shadow: 0 1px 3px rgba(36, 180, 126, 0.4);
@@ -3512,7 +3772,7 @@ body.fixed-header {
   text-align: center;
   font-size: 70px;
   line-height: 76px;
-  font-family: "Nunito Sans", "Open Sans", "helvetica", "arial";
+  font-family: "Open Sans", "helvetica", "arial";
   font-weight: 300;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -3525,7 +3785,7 @@ body.fixed-header {
     text-align: left;
     font-size: 30px;
     line-height: 36px;
-    font-family: "Nunito Sans", "Open Sans", "helvetica", "arial";
+    font-family: "Open Sans", "helvetica", "arial";
     font-weight: 300;
     margin: 0 auto;
     margin-bottom: 15px;
@@ -3548,7 +3808,7 @@ body.fixed-header {
   text-align: center;
   font-size: 30px;
   line-height: 38px;
-  font-family: "Nunito Sans", "Open Sans", "helvetica", "arial";
+  font-family: "Open Sans", "helvetica", "arial";
   font-weight: 400;
   color: #666;
 }
@@ -4184,7 +4444,7 @@ body.fixed-header {
     text-align: center;
     vertical-align: middle;
     border-bottom: 0;
-    font-family: "Nunito Sans", "Open Sans", "helvetica", "arial";
+    font-family: "Open Sans", "helvetica", "arial";
     font-size: 36px;
     font-weight: 300;
     line-height: 36px;
@@ -4218,10 +4478,27 @@ body.menu-mobile-is-active {
   overflow: hidden;
 }
 
+.menu-docs h2 {
+  text-transform: uppercase;
+  color: #333;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menu-docs h3 {
+  text-transform: uppercase;
+  color: #666;
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .menu-docs ul li a {
   color: #4776E6;
   text-decoration: none;
-  text-transform: uppercase;
+}
+
+.menu-docs ul li a:hover {
+  text-decoration: underline;
 }
 
 .docs {
@@ -4247,117 +4524,84 @@ body.menu-mobile-is-active {
   height: auto;
 }
 
-.docs .docs-content {
-  /* Setup */
-  /* Copy & Lists */
-  /* Headings */
-  /* Tables */
-  /* Code blocks */
-  /* Leading paragraph text */
-  /* Hug a the block above you */
-}
-
-.docs .docs-content html {
-  /* Change default typefaces here */
-  font-family: serif;
-  font-size: 137.5%;
-  -webkit-font-smoothing: antialiased;
-}
-
 .docs .docs-content p {
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
   margin-bottom: 0;
+  margin-top: 18px;
+  color: #343434;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.docs .docs-content h1 {
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.docs .docs-content h2 {
+  color: #6E6E6E;
+  margin-top: 20px;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.docs .docs-content h3 {
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+}
+
+.docs .docs-content h4,
+.docs .docs-content h5,
+.docs .docs-content h6 {
+  font-weight: bold;
 }
 
 .docs .docs-content ul,
 .docs .docs-content ol {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 18px;
 }
 
 .docs .docs-content ul li,
 .docs .docs-content ol li {
-  line-height: 1.5rem;
+  color: #343434;
+  font-family: "Open Sans", "helvetica", "arial";
+  font-size: 16px;
+  line-height: 1.5;
+  list-style-type: disc;
 }
 
-.docs .docs-content ul ul,
-.docs .docs-content ul ol,
-.docs .docs-content ol ul,
-.docs .docs-content ol ol {
-  margin-top: 0;
-  margin-bottom: 0;
+.docs .docs-content a {
+  text-decoration: none;
+  color: #4776E6;
+}
+
+.docs .docs-content a:hover, .docs .docs-content a:focus {
+  text-decoration: underline;
 }
 
 .docs .docs-content blockquote {
-  line-height: 1.5rem;
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 22px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  padding-left: 15px;
+  border-left: 3px solid #CCCCCC;
 }
 
-.docs .docs-content h1,
-.docs .docs-content h2,
-.docs .docs-content h3,
-.docs .docs-content h4,
-.docs .docs-content h5,
-.docs .docs-content h6 {
-  /* Change heading typefaces here */
-  font-family: sans-serif;
-  margin-top: 1.5rem;
-  margin-bottom: 0;
-  line-height: 1.5rem;
-}
-
-.docs .docs-content h1 {
-  font-size: 4.242rem;
-  line-height: 4.5rem;
-  margin-top: 3rem;
-}
-
-.docs .docs-content h2 {
-  font-size: 2.828rem;
-  line-height: 3rem;
-  margin-top: 3rem;
-}
-
-.docs .docs-content h3 {
-  font-size: 1.414rem;
-}
-
-.docs .docs-content h4 {
-  font-size: 0.707rem;
-}
-
-.docs .docs-content h5 {
-  font-size: 0.4713333333rem;
-}
-
-.docs .docs-content h6 {
-  font-size: 0.3535rem;
-}
-
-.docs .docs-content table {
-  margin-top: 1.5rem;
-  border-spacing: 0px;
-  border-collapse: collapse;
-}
-
-.docs .docs-content td,
-.docs .docs-content th {
-  padding: 0;
-  line-height: 33px;
-}
-
-.docs .docs-content code {
-  vertical-align: bottom;
-}
-
-.docs .docs-content .lead {
-  font-size: 1.414rem;
-}
-
-.docs .docs-content .hug {
-  margin-top: 0;
+.docs .docs-content blockquote p {
+  font-size: inherit;
 }
 
 .callout .callout-container {
@@ -4504,9 +4748,9 @@ body {
   margin: 0;
   padding: 0;
   color: #1B1B1B;
-  font-family: "Nunito Sans", "Open Sans", "helvetica", "arial";
+  font-family: "Open Sans", "helvetica", "arial";
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.5;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
