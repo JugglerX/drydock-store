@@ -18,7 +18,7 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    // aws: grunt.file.readJSON('aws-keys.json'),
+    aws: grunt.file.readJSON('aws-keys.json'),
 
     // adds a .html extension to all <a> tags
     dom_munger: {
